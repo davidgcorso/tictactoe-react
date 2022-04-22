@@ -1,11 +1,9 @@
 .score-board {
     width: 320px;
-    display: grid;
-    grid-auto-flow: column;
-    margin-top: 5px;
 }
 
 .score-board div {
+    margin-top: 5px;
     color: #b6aeae;
     text-align: center;
     font-size: 2em;

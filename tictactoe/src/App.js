@@ -41,15 +41,15 @@ const App = () => {
     }
 
     if(!newSquares.includes(null)) {
-      endGame(null, Array.from(Array(10).keys()));
+      endGame(null, Array.from(Array(10).keys())); //empate
       return
     }
     setTurn(turn === 'X' ? 'O' : 'X');
   }
 
   const handleClick = square => {
-    let newSquares = [...squares];
-    newSquares.splice(square, 1, turn);
+    let newSquares = [...squares]; //copia de squares
+    newSquares.splice(square, 1, turn); //modifica el simbolo sgun el turno
     setSquares(newSquares);
     checkForWinner(newSquares);
   }
@@ -58,12 +58,12 @@ const App = () => {
     setTurn(null);
     if(result !== null) {
       setScore({
-        ...score,
+        ...score,//desestructuramos score
         [result]: score[result] + 1,
       })
     }
     setWinningSquares(winningPositions);
-    setTimeout(reset, 2000);
+    setTimeout(reset, 1000); //para que se resetee en 1 seg despues de terminar una partida
   }
 
   return (

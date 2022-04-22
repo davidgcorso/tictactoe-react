@@ -1,5 +1,5 @@
 import './Square.css';
-import classNames from 'classnames';
+import classNames from 'classnames'; //se instala classnames
 
 const Square = ({ value, onClick, turn, winner }) => {
 
